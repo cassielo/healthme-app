@@ -1,0 +1,10 @@
+.git
+.gitignore
+.gitattributes
+.dockerignore
+Dockerfile
+docker-compose.yml
+render.yaml
+README.md
+docs
+*.sql

@@ -1,0 +1,22 @@
+services:
+  - type: web
+    name: healthme-app
+    runtime: docker
+    plan: free
+    region: oregon
+    dockerfilePath: ./Dockerfile
+    envVars:
+      - key: PORT
+        value: 10000
+      - key: DB_HOST
+        sync: false
+      - key: DB_PORT
+        sync: false
+      - key: DB_NAME
+        value: healthme
+      - key: DB_USER
+        value: healthme
+      - key: DB_PASSWORD
+        sync: false
+      - key: DB_SSL_CA
+        value: /etc/secrets/aiven-ca.pem

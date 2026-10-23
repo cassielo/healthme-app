@@ -1,0 +1,790 @@
+/* Body */
+body {
+    background: #fff;
+    font-family: 'Source Sans Pro', 微軟正黑體, sans-serif;
+    font-style: normal;
+    font-weight: 300;
+    position: relative;
+}
+
+html, body {
+    width: 100%;
+    overflow-x: hidden;
+}
+
+html {
+    font-size: 100%;
+}
+
+/* Typography */
+h1, h2, h3 {
+    font-weight: 400;
+    letter-spacing: 0.3rem;
+    text-transform: uppercase;
+}
+
+h1 {
+    color: #000;
+    font-size: 1.8rem;
+    font-weight: 700;
+}
+
+h2 {
+    color: #fff;
+    font-size: 1rem;
+}
+
+h3 {
+    color: #444;
+    font-size: 14px;
+    letter-spacing: 4px;
+}
+
+h5 {
+    font-weight: 400;
+    letter-spacing: 1px;
+}
+
+p {
+    color: #777;
+    font-size: 16px;
+    line-height: 28px;
+    word-spacing: 1px;
+    letter-spacing: 1px;
+}
+
+a {
+    outline: none;
+    text-decoration: none;
+}
+
+a, a:hover, a:focus {
+    color: inherit;
+    text-decoration: none;
+    outline: 0;
+    -webkit-transition: all 0.25s ease-out;
+    -moz-transition: all 0.25s ease-out;
+    -ms-transition: all 0.25s ease-out;
+    -o-transition: all 0.25s ease-out;
+    transition: all 0.25s ease-out;
+}
+
+img {
+    width: 100%;
+    max-width: 100%;
+}
+
+/* Navigation */
+.nav-container, nav {
+    overflow: visible;
+    transition: all 0.3s ease;
+    -webkit-transition: all 0.3s ease;
+    -moz-transition: all 0.3s ease;
+}
+
+nav {
+    -webkit-backface-visibility: hidden;
+    backface-visibility: hidden;
+    transition: all 0.3s ease;
+    -webkit-transition: all 0.3s ease;
+    -moz-transition: all 0.3s ease;
+}
+
+nav a {
+    color: #333;
+}
+
+.navbar {
+    background: transparent;
+    height: 94px;
+    max-height: 94px;
+    margin: 0;
+    border-radius: 0;
+    transition: all 0.3s ease;
+    -webkit-transition: all 0.3s ease;
+    -moz-transition: all 0.3s ease;
+}
+
+.brand {
+    float: left;
+    padding: 30px 0 0;
+    transition: all 0.3s ease;
+    -webkit-transition: all 0.3s ease;
+    -moz-transition: all 0.3s ease;
+    text-transform: uppercase;
+    letter-spacing: 0.3rem;
+}
+
+.brand a {
+    color: #333;
+    font-size: 24px;
+    font-weight: 700;
+    opacity: 1;
+    text-decoration: none;
+}
+
+.navicon {
+    position: relative;
+    right: 0;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-justify-content: flex-end;
+    -ms-flex-pack: end;
+    justify-content: flex-end;
+    padding: 20px 0 0;
+}
+
+nav ul {
+    display: inline-block;
+}
+
+#nav-menu a, #nav-menu button.nav-logout {
+    font-weight: 300;
+    font-size: 26px;
+    color: #fff;
+    text-transform: uppercase;
+    letter-spacing: 0.3rem;
+}
+
+#nav-menu button.nav-logout {
+    background: none;
+    border: none;
+    padding: 0;
+    cursor: pointer;
+    appearance: none;
+}
+
+#nav-menu li {
+    list-style: none;
+    padding: 6px;
+}
+
+.sticky nav.nav-inner .navbar {
+    height: 70px;
+    max-height: 70px;
+    margin: 0;
+    background: #fff;
+}
+
+.sticky nav.transparent .navbar {
+    background: transparent;
+}
+
+@media all and (max-width: 990px) {
+    .nav-inner {
+        background: #fff;
+    }
+
+    .transparent {
+        background: transparent;
+    }
+
+    .navicon {
+        padding-right: 10px;
+    }
+}
+
+.intro-inner {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    -webkit-transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+    width: 100%;
+    text-align: center;
+}
+
+.circle {
+    width: 45px;
+    height: 45px;
+    text-align: center;
+    margin: 0 auto;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    margin-top: -40px;
+    margin-left: -40px;
+    border-radius: 50%;
+    transition: all 0.3s ease;
+    -webkit-transition: all 0.3s ease;
+    -moz-transition: all 0.3s ease;
+    cursor: pointer;
+    z-index: 99;
+    padding: 4px 0 0;
+}
+
+.circle i {
+    font-size: 36px;
+    color: #111112;
+}
+
+.circle.dark {
+    border-color: #292929;
+}
+
+.circle.dark:before {
+    border-color: transparent transparent transparent #292929;
+}
+
+.circle.inline {
+    position: relative;
+    top: 0;
+    left: 0;
+    margin-top: 0;
+    margin-left: 0;
+    display: inline-block;
+    z-index: 0;
+}
+
+.list-menu {
+    position: fixed;
+    visibility: hidden;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    z-index: 9999999;
+    background: rgba(0, 0, 0, 0.9);
+    transition: all 0.6s ease;
+    -webkit-transition: all 0.6s ease;
+    -moz-transition: all 0.6s ease;
+    opacity: 0;
+    z-index: -1;
+}
+
+.list-menu.reveal-modal {
+    opacity: 1;
+    z-index: 999999;
+    visibility: visible;
+}
+
+.list-menu .ion-close-round {
+    font-size: 31px;
+    position: absolute;
+    top: 32px;
+    right: 32px;
+    color: #fff;
+    cursor: pointer;
+}
+
+/* Header */
+#header {
+    -webkit-background-size: cover;
+    background-size: cover;
+    background-position: center center;
+    text-align: center;
+    padding-top: 130px;
+    padding-bottom: 100px;
+}
+
+#header .header-thumb {
+    background: #fff;
+    border: 10px solid #f9f9f9;
+    padding: 62px 20px 62px 20px;
+}
+
+.header-one .header-thumb, .header-three .header-thumb, .header-five .header-thumb, .header-six .header-thumb {
+    padding: 32px 20px 32px 20px !important;
+}
+
+.header-one, .header-three, .header-five, .header-six {
+    height: 42vh !important;
+    min-height: 420px;
+    padding-top: 120px !important;
+}
+
+.header-one {
+    background: url('../img/1.jpg') no-repeat;
+    height: 60vh !important;
+    min-height: 550px;
+    padding-top: 150px !important;
+}
+
+.header-three {
+    background: url('../img/4.jpg') no-repeat;
+}
+
+.header-five {
+    background: url('../img/2.jpg') no-repeat;
+}
+
+.header-six {
+    background: url('../img/3.jpg') no-repeat;
+}
+
+/* Profile tabs */
+#portfolio {
+    text-align: center;
+    padding-top: 3rem;
+    padding-bottom: 6rem;
+}
+
+#portfolio h2 {
+    text-align: center;
+    padding-top: 0;
+    padding-bottom: 0;
+    font-size: 18px;
+    letter-spacing: 0;
+    font-weight: 500;
+}
+
+/* Quiz checkboxes and radio buttons */
+.quiz-contain {
+    display: block;
+    position: relative;
+    padding-left: 35px;
+    margin-bottom: 12px;
+    cursor: pointer;
+    font-size: 16px;
+    font-weight: 200;
+    letter-spacing: 0.3rem;
+    text-align: left;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+
+.quiz-contain input {
+    position: absolute;
+    opacity: 0;
+    cursor: pointer;
+}
+
+.checkmark {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 25px;
+    width: 25px;
+    background-color: #eee;
+}
+
+.quiz-contain:hover input ~ .checkmark {
+    background-color: #ccc;
+}
+
+.quiz-contain input:checked ~ .checkmark {
+    background-color: #000;
+}
+
+.checkmark:after {
+    content: '';
+    position: absolute;
+    display: none;
+}
+
+.quiz-contain input:checked ~ .checkmark:after {
+    display: block;
+}
+
+.quiz-contain .checkmark:after {
+    left: 9px;
+    top: 5px;
+    width: 5px;
+    height: 10px;
+    border: solid white;
+    border-width: 0 3px 3px 0;
+    -webkit-transform: rotate(45deg);
+    -ms-transform: rotate(45deg);
+    transform: rotate(45deg);
+}
+
+/* Small grey Chinese beside an English label */
+.zh {
+    color: #888;
+    font-size: 0.85em;
+    margin-left: 6px;
+}
+
+/* Tab buttons */
+.filter-wrapper {
+    width: 100%;
+    margin-bottom: 32px;
+    overflow: hidden;
+}
+
+.filter-wrapper li {
+    display: inline-block;
+    margin: 4px;
+}
+
+.filter-wrapper li a {
+    color: #666;
+    font-size: 15px;
+    font-weight: 400;
+    letter-spacing: 2px;
+    padding: 8px 17px;
+    margin-right: 2px;
+    margin-left: 2px;
+    text-transform: uppercase;
+    display: block;
+    text-decoration: none;
+    transition: all 0.4s ease-in-out;
+}
+
+.filter-wrapper li a:active {
+    background: #111112 !important;
+}
+
+.filter-wrapper li a:hover, .filter-wrapper li a:focus {
+    background: #111112;
+    color: #fff;
+}
+
+/* About */
+#about {
+    padding-top: 5rem;
+    padding-bottom: 8rem;
+}
+
+#about h2 {
+    color: black;
+    font-size: 17px;
+    word-spacing: 2px;
+    line-height: 28px;
+    letter-spacing: 2px;
+    text-transform: none;
+    font-weight: 500;
+}
+
+#about p {
+    font-size: 16px;
+    color: #777;
+    line-height: 28px;
+    word-spacing: 2px;
+    letter-spacing: 2px;
+    display: inline;
+    font-weight: 100;
+}
+
+/* Food picks and articles */
+#blog {
+    padding-top: 4rem;
+    padding-bottom: 6rem;
+}
+
+#blog .blog-thumb {
+    padding-top: 60px;
+    padding-bottom: 40px;
+}
+
+#blog .blog-thumb .btn {
+    border-radius: 0;
+    padding: 10px 32px;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    margin-top: 22px;
+    transition: all 0.4s ease-in-out;
+}
+
+#blog .blog-thumb .btn:hover {
+    background: #111112;
+    border-color: transparent;
+    color: #fff;
+}
+
+#blog h3 {
+    font-size: 20px;
+    letter-spacing: 5px;
+    font-weight: 900;
+    line-height: 40px;
+}
+
+/* Login and profile forms */
+#contact {
+    padding-top: 5rem;
+    padding-bottom: 5rem;
+    min-height: 550px;
+}
+
+#contact .contact-form {
+    padding-top: 14px;
+}
+
+#contact .form-control {
+    background: transparent;
+    border: 1px solid #eee;
+    border-radius: 0;
+    box-shadow: none;
+    font-size: 16px;
+    margin-bottom: 16px;
+    transition: all 0.4s ease-in-out;
+}
+
+#contact .form-control:hover {
+    border-color: #f0f0f0;
+}
+
+#contact input {
+    height: 50px;
+}
+
+#contact input[type='submit'] {
+    background: #111112;
+    color: #fff;
+    font-size: 15px;
+    font-weight: 400;
+    letter-spacing: 2px;
+    transition: all 0.4s ease-in-out;
+    margin-top: 10px;
+}
+
+#contact input[type='submit']:hover {
+    background: #444;
+}
+
+.contact-submit {
+    width: 75%;
+    padding-left: 25%;
+}
+
+#contact a {
+    text-decoration: underline;
+}
+
+#contact p {
+    text-align: center;
+}
+
+#contact1 {
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+}
+
+#contact1 .contact-form {
+    padding-top: 14px;
+}
+
+#contact1 .form-control {
+    background: transparent;
+    border: 1px solid #eee;
+    border-radius: 0;
+    box-shadow: none;
+    font-size: 16px;
+    margin-bottom: 16px;
+    transition: all 0.4s ease-in-out;
+}
+
+#contact1 .form-control:hover {
+    border-color: #f0f0f0;
+}
+
+#contact1 input {
+    height: 40px;
+    margin-top: 10px;
+    float: right;
+    display: inline;
+}
+
+#contact1 input[type='submit'] {
+    background: #111112;
+    color: #fff;
+    font-size: 15px;
+    font-weight: 400;
+    letter-spacing: 2px;
+    transition: all 0.4s ease-in-out;
+    margin-top: 10px;
+}
+
+#contact1 input[type='submit']:hover {
+    background: #444;
+}
+
+.contact-submit {
+    width: 75%;
+    padding-left: 25%;
+}
+
+#contact1 h2 {
+    color: black;
+    text-align: left;
+    letter-spacing: 0.2rem;
+    text-transform: none;
+    font-weight: 400;
+    line-height: 50px;
+    margin-top: 5px;
+}
+
+#contact1 h1 {
+    text-align: left;
+    font-size: 1.5rem;
+    text-transform: none;
+    letter-spacing: 0.1rem;
+}
+
+#contact1 h3 {
+    text-align: left;
+    line-height: 50px;
+    margin-top: 5px;
+    text-transform: none;
+    font-size: 16px;
+    font-weight: 200;
+}
+
+#contact1 .chart {
+    min-width: 400px;
+    max-width: 70%;
+    margin: auto;
+    margin-top: 50px;
+}
+
+#contact1 select {
+    background-color: transparent;
+    border: 0;
+    outline: 0.5px solid #eee;
+    border-radius: 0;
+    height: 40px;
+    width: 100%;
+    margin-top: 10px;
+    margin-bottom: 20px;
+    font-size: 16px;
+    line-height: 40px;
+}
+
+/* Sex radio buttons */
+.sex-contain {
+    font-weight: 200;
+    letter-spacing: 0.3rem;
+    text-align: left;
+    display: block;
+    position: relative;
+    padding-left: 35px;
+    margin-bottom: 25px;
+    margin-top: 25px;
+    cursor: pointer;
+    font-size: 16px;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+
+.sex-contain input {
+    position: absolute;
+    opacity: 0;
+    cursor: pointer;
+}
+
+.checkmark {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 25px;
+    width: 25px;
+    background-color: #eee;
+}
+
+.sex-contain:hover input ~ .checkmark {
+    background-color: #ccc;
+}
+
+.sex-contain input:checked ~ .checkmark {
+    background-color: #000;
+}
+
+.checkmark:after {
+    content: '';
+    position: absolute;
+    display: none;
+}
+
+.sex-contain input:checked ~ .checkmark:after {
+    display: block;
+}
+
+.sex-contain .checkmark:after {
+    left: 9px;
+    top: 5px;
+    width: 5px;
+    height: 10px;
+    border: solid white;
+    border-width: 0 3px 3px 0;
+    -webkit-transform: rotate(45deg);
+    -ms-transform: rotate(45deg);
+    transform: rotate(45deg);
+}
+
+/* Footer */
+footer {
+    background: #141414;
+    padding-top: 15px;
+    padding-bottom: 15px;
+    text-align: center;
+}
+
+/* Short pages: keep the footer at the window bottom */
+body.fill-screen {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+
+    /* dvh follows a phone's address bar */
+    min-height: 100dvh;
+}
+
+body.fill-screen > section {
+    flex: 1 0 auto;
+}
+
+/* Smaller screens */
+@media (max-width: 980px) {
+    .intro-inner {
+        top: 30%;
+    }
+}
+
+@media (max-width: 768px) {
+    .brand {
+        padding-left: 24px;
+    }
+
+    .header-one, .header-three, .header-five, .header-six {
+        min-height: 380px;
+        padding-top: 80px !important;
+    }
+
+    /* Fit charts to the screen (their 400px minimum overflows) */
+    #contact1 .chart {
+        min-width: 0;
+        max-width: 100%;
+    }
+}
+
+/* Upright screens: show the photo's right side, not its empty middle */
+@media (orientation: portrait) {
+    #header.header-one {
+        background-position: right center;
+    }
+}
+
+@media (max-width: 700px) {
+    h1 {
+        font-size: 1.3rem;
+    }
+
+    h3 {
+        font-size: 13px;
+        letter-spacing: 3px;
+    }
+
+    .filter-wrapper {
+        padding: 0;
+    }
+
+    #contact {
+        padding-bottom: 4rem;
+    }
+
+    .contact-submit {
+        width: 70%;
+    }
+}
+
+@media (max-width: 450px) {
+    .intro-inner {
+        top: 50%;
+    }
+}
