@@ -102,7 +102,7 @@ public/              web root: pages, form handlers, assets
 includes/            database connection and helpers, session, CSRF, login check
 recommender/         foodrec.py, blogrec.py, blogcrawler.py, articles, jieba dictionary, requirements.txt
 Dockerfile           web server image: Apache, PHP and the Python recommenders
-docker/              PHP error settings
+docker/              PHP settings
 healthme.sql         database schema and data
 docker-compose.yml   local setup: web, MySQL, Adminer
 render.yaml          Render deployment config
