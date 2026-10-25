@@ -5,7 +5,7 @@ require_once dirname(__DIR__) . '/includes/config.php';
 header('Content-Type: text/plain; charset=utf-8');
 header('Cache-Control: no-store');
 try {
-    $conn->query('SELECT COUNT(*) FROM user')->fetchColumn();
+    $conn->query('SELECT 1 FROM user LIMIT 1')->fetchColumn();
     echo 'ok';
 } catch (PDOException $e) {
     handle_db_error('health check', $e);
